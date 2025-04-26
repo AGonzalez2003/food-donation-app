@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Food Donation App</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Food Donation System</h1>
+
+    <!-- Add Restaurant -->
+    <div class="card">
+      <h2>Add a Restaurant</h2>
+
+      <!--Form for adding restaurant-->
+      <form id="restaurant-form">
+        <input type="text" id="r-name" placeholder="Name" required />
+        <input type="text" id="r-address" placeholder="Address" required />
+        <input type="email" id="r-email" placeholder="Email" required />
+        <button type="submit">Add Restaurant</button>
+      </form>
+
+      <!--List of all restaurants-->
+      <h2>Restaurant List</h2>
+      <ul id="restaurant-list"></ul>
+    </div>
+
+    <!-- Add Volunteer -->
+    <div class="card">
+      <h2>Add a Volunteer</h2>
+
+      <!--Form to add volunteer-->
+      <form id="volunteer-form">
+        <input type="text" id="v-name" placeholder="Name" required />
+        <input type="text" id="v-phone" placeholder="Phone" required />
+        <input type="email" id="v-email" placeholder="Email" required />
+        <button type="submit">Add Volunteer</button>
+      </form>
+
+      <!--Displays volunteers-->
+      <h2>Volunteer List</h2>
+      <ul id="volunteer-list"></ul>
+    </div>
+
+    <!-- Add Food Item -->
+    <div class="card">
+      <h2>Add Food Item</h2>
+      
+      <!--Form to add new food item-->
+      <form id="food-form">
+        <input type="text" id="f-name" placeholder="Name" required />
+        <input type="date" id="f-expiry" placeholder="Expiry Date" required />
+        <input type="number" id="f-quantity" placeholder="Quantity" required />
+        <select id="f-restaurant" required>
+          <option value="">Select a Restaurant</option>
+        </select>    
+        <button type="submit">Add Food Item</button>
+      </form>
+
+      <!--Displays all food items-->
+      <h2>Food Items List</h2>
+      <ul id="food-list"></ul>
+    </div>
+
+    <!-- Add Donation Pickup -->
+    <div class="card">
+      <h2>Add Donation Pickup</h2>
+
+      <!--Form for new pickup-->
+      <form id="pickup-form">
+        <input type="date" id="p-date" required />
+        <input type="text" id="p-location" placeholder="Delivery Location" required />
+        
+        <select id="p-food" required>
+          <option value="">Select Food Item</option>
+        </select>
+      
+        <select id="p-volunteer" required>
+          <option value="">Select Volunteer</option>
+        </select>
+      
+        <button type="submit">Add Pickup</button>
+      </form>
+      
+      <!--Displays pickups-->
+      <h2>Donation Pickups List</h2>
+      <ul id="pickup-list"></ul>
+    </div>
+
+    <!-- Update Pickup -->
+    <div class="card">
+      <h2>Update Pickup Location</h2>
+      
+      <!--Form to update pickup-->
+      <form id="update-pickup-form">
+        <input type="number" id="update-pickup-id" placeholder="Pickup ID" required />
+        <input type="text" id="update-new-location" placeholder="New Location" required />
+        <button type="submit">Update Location</button>
+      </form>
+    </div>
+
+    <!-- Expiring Items Report -->
+    <div class="card">
+      <h2>Food Items Expiring Soon (Next 7 Days)</h2>
+
+      <!--Button to show list-->
+      <button id="load-expiring">Load Expiring Food</button>
+      <ul id="expiring-list"></ul>  
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
