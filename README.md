@@ -35,6 +35,7 @@ UPDATE DonationPickup SET DeliveryLocation = ? WHERE PickupID = ?;
 
 -- Get food items expiring in next 7 days
 SELECT * FROM FoodItem WHERE ExpiryDate BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY);
+```
 
 ## Demo Video
 
