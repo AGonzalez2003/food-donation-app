@@ -39,5 +39,4 @@ SELECT * FROM FoodItem WHERE ExpiryDate BETWEEN CURDATE() AND DATE_ADD(CURDATE()
 
 ## Demo Video
 
-Watch the full functionality (backend, database, frontend) working here:  
-  Demo Video Link:
+Watch the full functionality (backend, database, frontend) working here:
